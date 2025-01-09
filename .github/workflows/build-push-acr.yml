@@ -80,7 +80,7 @@ jobs:
           outputs: type=image,name=${{ env.DIFY_IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
           cache-from: type=gha,scope=${{ matrix.service_name }}
           cache-to: type=gha,mode=max,scope=${{ matrix.service_name }}
-          tags: ${{env[matrix.image_tag_env]}}
+          tags: ${{ env.DIFY_IMAGE_NAME }}:${{env[matrix.image_tag_env]}}
 
       - name: Export digest
         run: |
