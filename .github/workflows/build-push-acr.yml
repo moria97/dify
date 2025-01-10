@@ -96,7 +96,7 @@ jobs:
 
   create-manifest:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: github.repository == 'moria97/dify'
     strategy:
       matrix:
