@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  ACR_REPO_URL: ${{ secrets.ACR_REPO_URL }}
+  ACR_REPO_URL: "mybigpai-registry.cn-beijing.cr.aliyuncs.com"
   ACR_REPO_USER: ${{ secrets.ACR_REPO_USER }}
   ACR_REPO_PASSWORD: ${{ secrets.ACR_REPO_PASSWORD }}
   DIFY_WEB_IMAGE_NAME: "mybigpai-registry.cn-beijing.cr.aliyuncs.com/mybigpai/dify-web"
