@@ -77,7 +77,7 @@ jobs:
           platforms: ${{ matrix.platform }}
           build-args: COMMIT_SHA=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.revision'] }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,name=${{ env.DIFY_IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
+          outputs: type=image,name=${{ env.DIFY_IMAGE_NAME }},push-by-digest=false,name-canonical=true,push=true
           cache-from: type=gha,scope=${{ matrix.service_name }}
           cache-to: type=gha,mode=max,scope=${{ matrix.service_name }}
           tags: ${{ env.DIFY_IMAGE_NAME }}:${{env[matrix.image_tag_env]}}
